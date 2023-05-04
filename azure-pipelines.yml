@@ -13,12 +13,12 @@ jobs:
   steps:
   - script: echo This is Job 1
     displayName: 'The Job Number'
-  - script: ping 127.0.0 -n 100
+  - script: ping 127.0.0 -n 50
     displayName: 'Make the job run for some time'
 
 - job: job2
   steps:
   - script: echo This is Job 2
     displayName: 'The Job Number'
-  - script: ping 127.0.0 -n 100
+  - script: ping 127.0.0 -n 50
     displayName: 'Make the job run for some time'
