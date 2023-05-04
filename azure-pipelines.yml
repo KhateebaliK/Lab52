@@ -6,17 +6,19 @@
 trigger:
 - main
 
-pool:
-  vmImage: ubuntu-latest
+pool: Default
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+jobs:
+- job: job1
+  steps:
+  - script: echo This is Job 1
+    displayName: 'The Job Number'
+  - script: ping 127.0.0 -n 100
+    displayName: 'Make the job run for some time'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-
-- script: cat file1
-  displayName: Output File Contents
+- job: job2
+  steps:
+  - script: echo This is Job 2
+    displayName: 'The Job Number'
+  - script: ping 127.0.0 -n 100
+    displayName: 'Make the job run for some time'
